@@ -24,6 +24,7 @@ export default function Header() {
   }, [open]);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-smooth ${
         scrolled
@@ -131,11 +132,12 @@ export default function Header() {
           </button>
         </div>
       </div>
+    </header>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-50 md:hidden"
+            className="fixed inset-0 z-[60] md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -191,6 +193,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
