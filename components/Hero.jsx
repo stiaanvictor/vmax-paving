@@ -87,25 +87,46 @@ export default function Hero() {
             variants={item}
             className="mt-6 font-display text-[clamp(2.9rem,8vw,5.8rem)] font-700 leading-[0.95] tracking-tightest text-balance"
           >
-            Arrive home to
+            Paving the future,
             <br />
-            something{" "}
-            <span className="relative whitespace-nowrap text-paper">
-              beautiful.
-              <svg
-                className="absolute bottom-1 left-0 h-3 w-full text-blue-bright sm:bottom-2"
-                viewBox="0 0 300 12"
-                fill="none"
-                preserveAspectRatio="none"
+            <span className="relative inline-flex flex-nowrap items-baseline gap-x-[0.28em] whitespace-nowrap align-baseline">
+              {/* Each word settles into place like a brick being laid */}
+              {["brick", "by", "brick."].map((word, i) => (
+                <motion.span
+                  key={`${word}-${i}`}
+                  initial={
+                    reduce ? { opacity: 0 } : { opacity: 0, y: -26, rotate: -7 }
+                  }
+                  animate={{ opacity: 1, y: 0, rotate: 0 }}
+                  transition={{
+                    delay: 1.05 + i * 0.2,
+                    type: "spring",
+                    stiffness: 420,
+                    damping: 17,
+                  }}
+                  className={`inline-block ${i === 1 ? "" : "text-blue-bright"}`}
+                >
+                  {word}
+                </motion.span>
+              ))}
+
+              {/* A single accent stroke wipes in beneath, left to right */}
+              <motion.span
                 aria-hidden
-              >
-                <path
-                  d="M2 9C60 3 120 3 150 5C190 7 250 7 298 3"
-                  stroke="currentColor"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                />
-              </svg>
+                initial={reduce ? false : { scaleX: 0, opacity: 0 }}
+                animate={{ scaleX: 1, opacity: 1 }}
+                transition={{
+                  delay: 1.65,
+                  duration: 0.65,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                style={{
+                  transformOrigin: "left",
+                  background:
+                    "linear-gradient(90deg, #2E86C9 0%, #2E86C9 62%, rgba(46,134,201,0) 100%)",
+                }}
+                className="absolute -bottom-2 left-0 h-1.5 w-full rounded-full sm:-bottom-3"
+              />
             </span>
           </motion.h1>
 
