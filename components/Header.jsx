@@ -68,7 +68,7 @@ export default function Header() {
                 scrolled ? "text-ink" : "text-paper"
               }`}
             >
-              Vmax Paving
+              max Paving
             </span>
             <span
               className={`text-[11px] font-500 uppercase tracking-[0.18em] transition-colors duration-300 ${

@@ -1,6 +1,6 @@
 # Vmax Paving — Website
 
-A clean, single-page marketing site for Vmax Paving (Cape Town). Built with
+A polished, single-page marketing site for Vmax Paving (Cape Town). Built with
 **Next.js 14 (App Router)**, **Tailwind CSS**, and **Framer Motion**.
 
 ## Run it

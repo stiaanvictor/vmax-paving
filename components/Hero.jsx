@@ -113,7 +113,7 @@ export default function Hero() {
             variants={item}
             className="mt-7 max-w-xl text-lg leading-relaxed text-paper/80 text-pretty sm:text-xl"
           >
-            Premium driveways, patios and walkways — laid level, finished clean and
+            Premium driveways, patios and walkways — laid level, finished neatly and
             built to last. Crafted across Cape Town for over{" "}
             {SITE.yearsExperience} years by Vmax Paving.
           </motion.p>

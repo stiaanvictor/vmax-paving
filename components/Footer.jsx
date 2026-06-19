@@ -12,7 +12,7 @@ export default function Footer() {
                 <span className="font-display text-lg font-700 leading-none">V</span>
               </span>
               <span className="font-display text-xl font-700 tracking-tightest text-ink">
-                Vmax Paving
+                max Paving
               </span>
             </div>
             <p className="mt-4 max-w-sm text-ink-soft text-pretty">
